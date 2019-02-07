@@ -9,77 +9,46 @@
 
  body,html{
   height: 100%;
-    font-family: 'Tahoma';
-  background-color: #eeeeee;
-    }
-  
-    *{
-        margin: 0;
-        padding: 0;
-      text-decoration: none;
-    box-sizing: border-box;
-      list-style: none;
-      flex-basis: 100%;
-    }
-  
-  .header ul{
-    display: flex;
-    background-color: #b3b3b3;
-  }
-  
-  .header h1{
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    padding: .5em;
-  }
-  
-  .header li{
-    flex: 1;
-   text-align: center;
-    padding: .5em;
-  }
-  
-  .header li:hover{
-    background-color: #666666;
-    transition: all .8s;
-  }
-  
-  .header a{
-   color: white;
-    
-  }
-  
-  
-  .contact-container{
+}
+
+*{
+  list-style: none;
+text-decoration: none;
+  box-sizing: box-border;
+  margin: 0;
+  padding: 0;
+  font-family: 'Tahoma';
+  flex-basis: 100%;
+}
+
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header,.footer{
+  flex: 1;
+flex-basis: 100%;
+}
+
+
+
+.contact-container{
       display: flex;
-    flex-wrap: no-wrap;
-  
-      
+    flex-wrap: no-wrap;    
   }
   
   
   .contact-box{
-  padding: 1em;
+  margin-right: 1em;
+    padding: 1em;
   text-align: center;
   
-  }
-  
-  
-  .map{
-    width: 100%;
-    height: 100%;
-  }
-  
-  
-  
-  
-  .contact-map{
-  padding: .5em;
-      text-align: center;
-  }
-  
-  
-  .name,.email,.subject,.textarea{
+}
+
+
+.name,.email,.subject,.textarea{
       width: 100%;
   padding: .8em;
   margin-bottom: .5em;
@@ -115,26 +84,68 @@
       font-size: 2em;
   }
   
-  .container{
-    display: flex;
-    flex-wrap: wrap;
-  }
   
-  footer{
-   flex: 1;
-    margin-top: 5em;
+
+.header
+{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #eeeeee;
+}
+
+.site-name h1{
+padding: .5em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.navigation ul{
+  display: flex;
+  background-color: #a6a6a6;
+}
+
+.navigation li{
+  padding: .5em;
+  text-align: center;
+  border: 1px solid #999999;
+}
+
+.navigation li:hover{
+  background-color: #737373;
+  transition: all .8s;
+}
+
+.navigation a{
   color: white;
-    background-color: #666666;
-      padding: 1em;
-      text-align: center;
+  
+}
+
+
+.map{
+  width: 100%;
+height: 100%;
+}
+
+footer{
+  flex: 1;
+  text-align: center;
+  padding: 1em;
+  background-color: black;
+  color: white;
+   margin-top: 8em;
+}
+
+
+@media (max-width: 505px){
+  .contact-container{
+    
+    flex-wrap: wrap;    
   }
+}
+
+@media (max-width: 308px){
   
-  
-    @media (max-width: 505px){
-        
-        .contact-container{
-       
-        flex-wrap: wrap;   
-      }
-      
-      }
+  .navigation ul{
+    flex-direction: column;
+  }
+}
